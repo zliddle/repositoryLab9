@@ -1,7 +1,8 @@
 #Zilong Liddle main and cncoder
 
 numstring = ''
-#edit#5
+#edit#6
+#provides the encode function
 def encode(numstring):
     newlist = []
     newstring = ""
@@ -13,10 +14,10 @@ def encode(numstring):
     return newstring
 
 
-
-#edit
+#edit is the main body of code with option and user input
 if __name__ == '__main__':
     option = ""
+    #loops until the user chooses to exit
     while option != "3":
         print("Menu")
         print("-------------")
@@ -26,10 +27,12 @@ if __name__ == '__main__':
         option = input("Please enter an option: ")
         if option == "1":
             string_encode = input("Please enter your password to encode: ")
+            #makes use of encode functoin
             newstring = encode(string_encode)
             print("Your password has been encoded and stored!\n")
         elif option == "2":
             decodedstring = decode(newstring)
+            #effectively gets both the decoded and encoded string
             print(f"The encoded password is {newstring}, and the original password is {decodedstring}\n")
         elif option == "3":
             break
