@@ -1,4 +1,4 @@
-#Zilong Liddle main and cncoder
+#Zilong Liddle main and encoder
 
 numstring = ''
 #edit#6
@@ -27,7 +27,7 @@ if __name__ == '__main__':
         option = input("Please enter an option: ")
         if option == "1":
             string_encode = input("Please enter your password to encode: ")
-            #makes use of encode functoin
+            #makes use of encode function
             newstring = encode(string_encode)
             print("Your password has been encoded and stored!\n")
         elif option == "2":
