@@ -14,6 +14,23 @@ def encode(numstring):
     return newstring
 
 
+def decode(encoded_password):
+    # Validate the input
+    if len(encoded_password) != 8 or not encoded_password.isdigit():
+        return "Invalid password. Please enter an 8-digit password containing only numbers."
+
+    # Decode each digit
+    # creates an empty list for the decoded digits
+    decoded_digits = []
+    for digit in encoded_password:
+        new_digit = (int(digit) - 3) % 10
+        decoded_digits.append(str(new_digit))
+    # joins the decoded digits into a single string, then returns that string
+    decoded_password = ''.join(decoded_digits)
+    return decoded_password
+
+
+
 #edit is the main body of code with option and user input
 if __name__ == '__main__':
     option = ""
